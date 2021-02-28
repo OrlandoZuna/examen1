@@ -15,7 +15,7 @@ var inittest = async () => {
     "8:00 A.M.",
     'true'
   );*/
-  //console.log(await tareamodel.getTarea());
+  //////console.log(await tareamodel.getTarea());
   //tareamodel.deleteTarea("603bc063ec192401a79be7a7");
   //console.log(await tareamodel.getTarea());
 // await tareamodel.updateModel("603c1792f9c4360f9bb354e4", { name: "prueba a fallar",
