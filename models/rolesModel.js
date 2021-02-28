@@ -8,7 +8,7 @@ class RolesModel {
       description: String,
       endpoint: String,
       method: String,
-    });
+      });
     if (modelenum["roles"] == null) {
       this.mymodel = mongoose.model("roles", this.rolesSchema);
       modelenum["roles"] = this.mymodel;

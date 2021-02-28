@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 mongoose.connect(
-  `mongodb://${process.env.IPHOSTDB}:${process.env.PORTDB}/${process.env.NAMEDB}`,
+  "mongodb://172.21.0.2:27017/restorant",
   {
     useNewUrlParser: true,
   }

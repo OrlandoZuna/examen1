@@ -2,13 +2,15 @@ import express from "express";
 import IndexController from "../controller/indexController.js";
 import UserController from "../controller/userController.js";
 import RolesController from "../controller/rolesContoller.js";
-import JsonWebTokenManagement from "../middleware/JsonWebTokenManagement.js";
+import todoController from "../controller/todoController.js";
+//import JsonWebTokenManagement from "../middleware/JsonWebTokenManagement.js";
 
 var router = express.Router();
 var indexControler = new IndexController();
 var userController = new UserController();
 var rolesController = new RolesController();
-var jsonwebtokenmanagement = new JsonWebTokenManagement();
+var todoControler = new todoController();
+//var jsonwebtokenmanagement = new JsonWebTokenManagement();
 /* GET home page. */
 /**
  * Endpoints de los usuarios
@@ -40,5 +42,9 @@ router.delete("/roles/:id", rolesController.deleteRol);
 /* 
 Implemente 
 */
-
+//rutas del controlador de tareas//
+router.post("/tarea", todoControler.createTarea);
+router.delete("/tarea/eliminar", todoControler.deleteTarea);
+router.put("/tarea/actualizar", todoControler.updateTarea);
+router.get("/tarea/mostrar", todoControler.getTarea);
 export default router;
